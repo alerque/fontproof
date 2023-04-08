@@ -296,6 +296,10 @@ function package:registerCommands ()
           SILE.call("font", fontoptions, function ()
             if glyphs[ix+1] then
               local char = glyphs[ix+1].uni
+              SU.debug("fontproof", "unicode point", ("%x"):format(ix+1), ix+1, "as char", char)
+              if ix+1 == 942 then
+                SU.warn("found out of range")
+              else
               if glyphs[ix+1].present then
                 local left = SILE.shaper:measureChar(char).width
                 local centeringglue = SILE.nodefactory.glue((width-left)/2)
@@ -306,6 +310,7 @@ function package:registerCommands ()
                 SILE.typesetter:pushGlue(width)
               end
               SILE.call("hbox")
+              end
             end
           end)
 

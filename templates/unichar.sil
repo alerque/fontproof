@@ -4,8 +4,10 @@
 \begin[class=fontproof]{document}
 \section{Range test}
 
-\unicharchart[type=range,start=0100,end=01F7]
-\unicharchart[type=range,start=1D500,end=1D51F]
+\unicharchart[type=all,columns=12,rows=16]
+% \unicharchart[type=range,start=8a0,end=9b1]
+% \unicharchart[type=range,start=0100,end=01F7]
+% \unicharchart[type=range,start=1D500,end=1D51F]
 
 %\font[size=30pt,weight=700]{Repertoire test}\par
 %\unicharchart[type=all]
